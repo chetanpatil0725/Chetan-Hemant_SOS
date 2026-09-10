@@ -1,0 +1,1145 @@
+/* =====================================================
+   VEHICLE ACCIDENT EMERGENCY SYSTEM
+   CSS3
+===================================================== */
+
+
+/* ================= BASIC RESET ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #20242d,
+            #0c0e12 60%
+        );
+
+    color: #ffffff;
+
+    min-height: 100vh;
+
+    padding-bottom: 90px;
+}
+
+
+/* ================= HEADER ================= */
+
+.header {
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px 5%;
+
+    background: rgba(15, 17, 22, 0.95);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid #2d323c;
+}
+
+
+.logo-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.logo {
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #292e38;
+
+    border-radius: 12px;
+
+    font-size: 24px;
+}
+
+
+.logo-area h1 {
+
+    font-size: 19px;
+}
+
+
+.logo-area p {
+
+    font-size: 11px;
+
+    color: #9299a5;
+
+    margin-top: 3px;
+}
+
+
+.status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: #50e890;
+}
+
+
+.status-dot {
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #50e890;
+
+    box-shadow: 0 0 12px #50e890;
+}
+
+
+/* ================= CONTAINER ================= */
+
+.container {
+
+    width: min(900px, 92%);
+
+    margin: auto;
+
+    padding-top: 25px;
+}
+
+
+.page {
+
+    display: none;
+
+    animation: pageAnimation 0.3s ease;
+}
+
+
+.page.active {
+
+    display: block;
+}
+
+
+@keyframes pageAnimation {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* ================= WELCOME ================= */
+
+.welcome-card {
+
+    background: linear-gradient(
+        135deg,
+        #1b2029,
+        #14171d
+    );
+
+    border: 1px solid #2d333e;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+.small-text {
+
+    color: #ff4d5a;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+
+.welcome-card h2 {
+
+    font-size: 27px;
+
+    margin-bottom: 8px;
+}
+
+
+.welcome-card p:last-child {
+
+    color: #a6adb8;
+
+    line-height: 1.5;
+
+    font-size: 14px;
+}
+
+
+/* ================= SOS ================= */
+
+.sos-section {
+
+    text-align: center;
+
+    padding: 10px 0 30px;
+}
+
+
+.sos-button {
+
+    width: 190px;
+    height: 190px;
+
+    border-radius: 50%;
+
+    border: 10px solid rgba(255, 70, 80, 0.15);
+
+    background: linear-gradient(
+        145deg,
+        #ff3949,
+        #bd1727
+    );
+
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+
+    box-shadow:
+        0 0 0 10px rgba(255, 50, 60, 0.08),
+        0 15px 45px rgba(0, 0, 0, 0.5);
+
+    transition: 0.25s;
+}
+
+
+.sos-button:hover {
+
+    transform: scale(1.04);
+
+    box-shadow:
+        0 0 0 14px rgba(255, 50, 60, 0.08),
+        0 20px 55px rgba(0, 0, 0, 0.6);
+}
+
+
+.sos-button:active {
+
+    transform: scale(0.95);
+}
+
+
+.sos-icon {
+
+    font-size: 38px;
+}
+
+
+.sos-button span:nth-child(2) {
+
+    font-size: 35px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+}
+
+
+.sos-button small {
+
+    font-size: 11px;
+
+    opacity: 0.85;
+
+    letter-spacing: 1px;
+}
+
+
+.sos-help {
+
+    color: #8e96a3;
+
+    font-size: 12px;
+
+    margin-top: 15px;
+}
+
+
+/* ================= CARDS ================= */
+
+.card {
+
+    background: #15181e;
+
+    border: 1px solid #292e37;
+
+    border-radius: 18px;
+
+    padding: 20px;
+
+    margin-bottom: 18px;
+}
+
+
+.card-title {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+
+.card h3 {
+
+    font-size: 16px;
+
+    margin-bottom: 4px;
+}
+
+
+.card-title p {
+
+    color: #858d99;
+
+    font-size: 12px;
+}
+
+
+/* ================= CONTACT GRID ================= */
+
+.contact-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.contact {
+
+    background: #20242c;
+
+    border: 1px solid #303640;
+
+    color: white;
+
+    border-radius: 14px;
+
+    padding: 16px 8px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+
+    transition: 0.2s;
+}
+
+
+.contact:hover {
+
+    transform: translateY(-3px);
+
+    background: #292e37;
+}
+
+
+.contact span {
+
+    font-size: 25px;
+}
+
+
+.contact strong {
+
+    font-size: 12px;
+}
+
+
+.contact small {
+
+    color: #8e96a3;
+
+    font-size: 11px;
+}
+
+
+/* ================= LOCATION ================= */
+
+.location-box {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background: #1d2128;
+
+    border: 1px solid #303640;
+
+    padding: 16px;
+
+    border-radius: 14px;
+}
+
+
+.location-icon {
+
+    font-size: 30px;
+}
+
+
+.location-box strong {
+
+    font-size: 13px;
+}
+
+
+.location-box p {
+
+    font-size: 11px;
+
+    color: #858d99;
+
+    margin-top: 4px;
+}
+
+
+.small-button {
+
+    border: none;
+
+    background: #303642;
+
+    color: white;
+
+    border-radius: 9px;
+
+    padding: 9px 13px;
+
+    cursor: pointer;
+
+    font-size: 11px;
+}
+
+
+/* ================= EMAIL ================= */
+
+.email-form {
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+
+.email-status {
+
+    flex-basis: 100%;
+
+    min-height: 18px;
+
+    font-size: 12px;
+
+    color: #a6adb8;
+}
+
+
+.email-status.success {
+
+    color: #50e890;
+}
+
+
+.email-status.error {
+
+    color: #ff7a83;
+}
+
+
+.email-form input,
+.form input {
+
+    flex: 1;
+
+    background: #20242b;
+
+    border: 1px solid #343a45;
+
+    color: white;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    outline: none;
+}
+
+
+.email-form input:focus,
+.form input:focus {
+
+    border-color: #ff4553;
+}
+
+
+.primary-button {
+
+    background: #e93746;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 13px 17px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+
+.primary-button:hover {
+
+    background: #ff4655;
+}
+
+
+.primary-button:disabled {
+
+    opacity: 0.65;
+
+    cursor: wait;
+}
+
+
+/* ================= SHARE ================= */
+
+.share-button {
+
+    width: 100%;
+
+    background: #252a33;
+
+    border: 1px solid #363c47;
+
+    color: white;
+
+    border-radius: 11px;
+
+    padding: 14px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+
+    margin-bottom: 20px;
+}
+
+
+.page-header h2 {
+
+    font-size: 25px;
+
+    margin-bottom: 6px;
+}
+
+
+.page-header p {
+
+    color: #8c94a0;
+
+    font-size: 13px;
+}
+
+
+/* ================= FORM ================= */
+
+.form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+/* ================= SAVED CONTACT ================= */
+
+.saved-contact {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #20242b;
+
+    border: 1px solid #303640;
+
+    padding: 13px;
+
+    border-radius: 11px;
+
+    margin-top: 10px;
+}
+
+
+.saved-contact-info strong {
+
+    display: block;
+
+    font-size: 13px;
+}
+
+
+.saved-contact-info small {
+
+    color: #858d99;
+
+    font-size: 11px;
+}
+
+
+.contact-actions {
+
+    display: flex;
+
+    gap: 6px;
+}
+
+
+.icon-button {
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 8px;
+
+    cursor: pointer;
+
+    background: #303640;
+
+    color: white;
+}
+
+
+/* ================= HISTORY ================= */
+
+.history-item {
+
+    background: #20242b;
+
+    border-left: 3px solid #ff4654;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    margin-bottom: 10px;
+}
+
+
+.history-item strong {
+
+    display: block;
+
+    font-size: 13px;
+
+    margin-bottom: 4px;
+}
+
+
+.history-item small {
+
+    color: #89919d;
+
+    font-size: 11px;
+}
+
+
+.danger-button {
+
+    width: 100%;
+
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border: 1px solid #7c2932;
+
+    background: #351a1e;
+
+    color: #ff6d78;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-card h3 {
+
+    margin-top: 18px;
+
+    margin-bottom: 8px;
+}
+
+
+.about-card h3:first-child {
+
+    margin-top: 0;
+}
+
+
+.about-card p {
+
+    color: #9da4af;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+.about-card ul {
+
+    padding-left: 20px;
+
+    color: #a8afb9;
+
+    line-height: 1.9;
+
+    font-size: 13px;
+}
+
+
+.technology-box {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+
+.technology-box span {
+
+    background: #242932;
+
+    border: 1px solid #343a45;
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+}
+
+
+/* ================= MODAL ================= */
+
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    backdrop-filter: blur(8px);
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.modal.show {
+
+    display: flex;
+}
+
+
+.modal-box {
+
+    width: min(400px, 100%);
+
+    background: #171a20;
+
+    border: 1px solid #4a2c30;
+
+    border-radius: 22px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.7);
+
+    animation: modalAnimation 0.3s ease;
+}
+
+
+@keyframes modalAnimation {
+
+    from {
+
+        transform: scale(0.8);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+
+}
+
+
+.warning-icon {
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+
+.modal-box h2 {
+
+    color: #ff5360;
+
+    margin-bottom: 8px;
+}
+
+
+.modal-box p {
+
+    color: #929aa6;
+
+    font-size: 13px;
+}
+
+
+#countdown {
+
+    font-size: 80px;
+
+    font-weight: 900;
+
+    color: #ff4553;
+
+    margin: 15px 0;
+
+    text-shadow: 0 0 25px rgba(255, 50, 60, 0.3);
+}
+
+
+.countdown-text {
+
+    margin-bottom: 20px;
+}
+
+
+.cancel-button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #833039;
+
+    border-radius: 10px;
+
+    background: #3a1d21;
+
+    color: #ff6670;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+/* ================= BOTTOM NAV ================= */
+
+.bottom-nav {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    right: 0;
+
+    z-index: 200;
+
+    height: 72px;
+
+    background: rgba(18, 20, 25, 0.97);
+
+    border-top: 1px solid #2d323b;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.nav-item {
+
+    width: 100px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777f8c;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+
+.nav-item span {
+
+    font-size: 19px;
+}
+
+
+.nav-item small {
+
+    font-size: 10px;
+}
+
+
+.nav-item.active {
+
+    color: #ff4b58;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 650px) {
+
+    .header {
+
+        padding: 13px 4%;
+    }
+
+
+    .logo-area h1 {
+
+        font-size: 16px;
+    }
+
+
+    .logo-area p {
+
+        font-size: 9px;
+    }
+
+
+    .container {
+
+        width: 94%;
+
+        padding-top: 15px;
+    }
+
+
+    .welcome-card {
+
+        padding: 20px;
+    }
+
+
+    .welcome-card h2 {
+
+        font-size: 22px;
+    }
+
+
+    .sos-button {
+
+        width: 160px;
+        height: 160px;
+    }
+
+
+    .sos-button span:nth-child(2) {
+
+        font-size: 29px;
+    }
+
+
+    .contact-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .email-form {
+
+        flex-direction: column;
+    }
+
+
+    .bottom-nav {
+
+        justify-content: space-around;
+    }
+
+
+    .nav-item {
+
+        width: 80px;
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .status {
+
+        font-size: 10px;
+    }
+
+
+    .logo {
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .sos-button {
+
+        width: 145px;
+        height: 145px;
+    }
+
+
+    .card {
+
+        padding: 15px;
+    }
+
+}
